@@ -29,7 +29,7 @@ variable "value" {
 }
 
 variable "user_data_file" {
-    type = "nginix"
+    type = "nginix_setup"
     description = "starting nginx on server"
   
 }
