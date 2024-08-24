@@ -22,4 +22,4 @@ resource "aws_instance" "this" {
 
 }
 
- user_data = file(nginix_setup.sh)
+ 
