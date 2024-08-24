@@ -12,7 +12,6 @@ provider "aws" {
   region = var.region
 }
 
-
 ##### Try to create one ubuntu server
 resource "aws_instance" "this" {
   ami                     = var.ami
