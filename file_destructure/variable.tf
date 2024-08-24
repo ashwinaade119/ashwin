@@ -28,7 +28,7 @@ variable "value" {
   description = "output block calling"
 }
 
-variable "" {
+variable "user_data_fil" {
   
 }
 
