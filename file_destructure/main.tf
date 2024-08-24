@@ -21,3 +21,4 @@ resource "aws_instance" "this" {
   tags = var.tags
 
 }
+ user_data = file(var.user_data_file)
