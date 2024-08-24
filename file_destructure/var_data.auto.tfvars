@@ -6,8 +6,6 @@ instance_type = "t2.medium"
 
 key_name = "FINAL"
 
-s
-
 tags = {
     Enviorment = "staging"
     owner = "jarvis"    
