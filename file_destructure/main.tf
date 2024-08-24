@@ -21,5 +21,5 @@ resource "aws_instance" "this" {
   tags = var.tags
 
 }
+
  user_data = file(nginix_setup.sh)
- 
