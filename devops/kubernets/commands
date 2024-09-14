@@ -1,0 +1,42 @@
+kubectl run pod nginx-pod —-image=nginx:latest 
+Create nginx pod.
+kubectl expose pod nginx-pod --type=NodePort --port=80 --target-port=80 --name=nginx-service --node-port=30007
+Attach NodePort service to the nginx pod.
+kubectl run nginx-pod1 --image=nginx:latest --port=80
+Create another pod because we are not able to attach NodePort and LoadBalancer to the same pod.
+kubectl expose pod nginx-pod1 --type=LoadBalancer --port=80 --target-port=80 --name=nginx-service
+Attach LoadBalancer to the pod.
+kubectl get pods 
+ List all pods in the cluster.
+kubectl get svc
+List all services in the cluster.
+kubectl get ns
+List all namespaces in the cluster
+kubectl create -f <file>
+ Create resources from a YAML or JSON file.
+kubectl apply -f <file>
+Apply changes to resources from a YAML or JSON file.
+kubectl apply -f manifestfile --dry-run=client
+kubectl --port-forward 80:80 podname
+kubectl scale
+kubectl autoscale deployment/deploymentname --min --max
+kubectl setimage deployment/deploymentname --imagename deploymentname/docker-imagename
+kubctl describe svc svcname
+kubectl get daemonset
+Get daemonset present
+kubectl get nodes --watch
+kubectl get configmap
+kubectl get deployment metrics-server -n kube-system
+get ns of matrix server
+kubectl apply -f githublinkofmanifestfile
+kubectl exec -i -t podname --container contname --/bin/bash
+enable matrix server
+kubectl get pods --show-labels
+kubectl edit deployment deploy
+kubectl scale rs/rsname --replicas=1
+kubectl logs podname -c container name
+kubectl events
+kubectl get -o wide pod podname
+kubectl get -o wide node
+kubectl delete -f <file>
+ Delete resources defined in a YAML or JSON file.

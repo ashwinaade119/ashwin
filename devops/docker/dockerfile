@@ -1,0 +1,15 @@
+
+FROM
+
+LABEL 
+
+RUN 
+
+COPY 
+
+WORKDIR
+
+EXPOSE
+
+CMD
+

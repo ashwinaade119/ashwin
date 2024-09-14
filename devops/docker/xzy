@@ -1,0 +1,286 @@
+s Ojas Jawale
+Essential r Docker commands cheat-sheet
+. 1. y Registry & & Repository:
+- Repository refers to the hosted collection of the images
+creating the file system for containers.
+- Registry refers to the host containing the repositories
+and providing an HTTP API that helps manage the
+repositories.
+- Docker has its central registry with thousands of
+repositories. But before you use the images from this
+registry, make sure you verify them to avoid security
+issues.
+● r docker : login: To log in toa registry.
+● r docker : logout: To log out from a registry.
+● r docker : search: It will search the registry for the image.
+● r docker : pull: It will pull an image from the registry to
+the local machine.
+● r docker : push: It will push an image to the registry from
+the local machine.
+2. Images:
+You can refer to images as the templates for the Docker
+containers.You can run the following commands to work with
+the images:
+● r docker : images: It will display all images.
+● r docker : import: You can create an image from a tarball.
+● r docker : build: You can create an image from Dockerfile.
+● r docker : commit: You can create an image from a container
+and temporarily pause it if it is running.
+● r docker : rmi: It will removean image.
+● r docker : load: It will load an image from a tar archive as
+STDIN, including images and tags.
+● : docker: It will save an imageto a tar archive stream to
+STDOUT with all parent layers, tags, & versions.
+● r docker : history: To displaythe history of an image
+● r docker : tag: It will tag the image to a name.
+● r docker d load < < : my_image.tar.gz: It will load an imagefrom
+the mentioned file along with its history.
+● r docker e save : my_image: my_tag | gzip > my_image.tar.gz: It
+will save an existing file.
+● t cat z my_container.tar.gz| r docker t import - -
+my_image:my_tag: It will importthe
+container as an image from the mentioned file without its
+history; thus, the file size issmall.
+● r docker t export r my_container | | p gzip > > my_container.tar.gz:
+Itwill export the container.
+● r docker h push : repo[:tag]:It will push an image or repo
+from the registry.
+● r docker l pull : repo[:tag]:It will pull an image or repo
+from the registry.
+● r docker h search : text: It will allow you to search for an
+image in the official registry.
+. 3. Containers:
+Containers are the isolated Dockerprocess that contains
+the code to be executed.
+● r docker : create: It will create a container without
+starting it.
+● r docker : rename: To remane the container.
+● r docker : run: It will createand start the container in one
+task.
+● r docker : rm: It will delete a container.
+● r docker : update: It will update a container's resource
+limits. Usually, a container will start and stop
+immediately if you run it without any option.
+● r docker n run d -td : container_id: It will keep the container
+running, -t will allocate a pseudo-TTY session, and -d will
+detach the container automatically.
+● r docker n run : --rm: It will remove the container once it
+stops.
+● r docker n run v -v : $HOSTDIR:$DOCKERDIR: It will map a
+directory on the host to a docker container.
+● r docker m rm : -v: It will remove the volumes associated with
+the container.
+● r docker n run : --log-driver=syslog: Docker 1.10 comes with
+the logging driver for each container, and it will run
+docker with a custom log driver.
+● r docker : start: It will start a container, so it is running.
+● r docker : stop: It will stop a running container.
+● r docker : restart: It stops and starts a container.
+● r docker : pause: It will pause a running container,
+"freezing" it in place.
+● r docker : unpause: It will unpause a running container.
+● r docker : wait: It will blockuntil the running container
+stops.
+● r docker : kill: It sends a SIGKILL to a running container.
+● r docker : attach: It will connect to a running container.
+● r docker - run- t it c -c 2 512 : agileek/cpuset-test: It lets you
+limit the CPU, either using a percentage of all CPUs or by
+using specific cores. 1024 means 100% of the CPU, so if
+you want the container to take 50%of all CPU cores, you
+should specify 512.
+● r docker n run t -it 6 --cpuset-cpus=0,4,6 agileek/cpuset-test:
+CPU cores using cpuset-cpus.
+● r docker n run t -it m -m M 300M 4 ubuntu:14.04 : /bin/bash: Setting
+memory constraints on Docker.
+● r docker n run m --rm t -it d --cap-add N SYS_ADMIN --device
+e /dev/fuse : sshfs: Setting Linux capabilities using cap-add.
+Itlets you mount a FUSE-based filesystem, and you need to
+combine both --cap-add and --device
+● r docker n run t -it 0 --device=/dev/ttyUSB0 n debian bash:
+Providing access to single device.
+● r docker n run t -it d --privileged v -v /dev/bus/usb:/dev/bus/usb
+n debian : bash: Providing access to all devices.
+● r docker : ps: It will displaythe running containers.
+● r docker : logs: Provide the logs from the container. (You
+can use a custom log driver, but logs are only available
+for json-file and journald in 1.10).
+● r docker : inspect: It checks all the information on a
+container (including IP address).
+● r docker : events: It will getthe events from the container.
+● r docker : port: It will display the public-facing port of
+the container.
+● r docker : top: It will display the running processes in the
+container.
+● r docker : stats: It will display the containers' resource
+usage statistics.
+● r docker : diff: It will display the changed files in the
+container's FS.
+● r docker s ps : -a: It will display the running and stopped
+containers.
+● r docker s stats : --all: It will display a list of all
+containers, default shows just running.
+● r docker : export: It will turn the container filesystem into
+a tarball archive stream to STDOUT.
+● r docker exec: To execute a command in a container.
+● r docker c exec t -it o foo : /bin/bash: To enter a running
+container, attach a new shell process
+toa running container called foo.
+● r docker t commit r container : image: It will commit a new
+docker image.
+. 4. e Dockerfile t Cheat Sheet:
+Itis a config file that will set up a Docker container
+whenever you run a docker buildonit.
+The following are some instructions that you can use while
+working with Dockerfile:
+● FROM: It will set the BaseImage for subsequent
+instructions.
+● R MAINTAINER d (deprecated - - e use L LABEL : instead): It willset
+the Author field of the generated images.
+● : RUN: It will execute any commands in a new layer on top
+ofthe current image and then commit the results.
+● CMD: It will offer the defaults for an executing
+container.
+● : EXPOSE: It will tell the Docker that the container
+listens on the specified network ports at runtime.
+● : ADD: It will copy the new files, directories, or remote
+files to the container.
+● : COPY: It will copy the newfiles or directories to a
+container. It copies as root regardless of the USER/WORKDIR
+settings by default. Use --chown=<user>:<group> to provide
+the ownership to another user/group.
+● : ENTRYPOINT: It will configurea container that will run
+asan executable.
+● : VOLUME: It will create a mount point for externally
+mounted volumes or other containers.
+● : USER: It will set the username for the following RUN /
+CMD / ENTRYPOINT commands.
+● : WORKDIR: It will set the working directory.
+● : ARG: It lets you define a build-time variable.
+● : ONBUILD: It will add a trigger instruction when the image
+isused as the base for anotherbuild.
+. 5. Networks:
+- Docker has a featured network, allowing the containers to
+connect. You can create three
+network interfaces with Docker,namely bridge, host, and
+none.
+- By default, the new containerislaunched into the bridge
+network. To establish communication among several
+containers, you need a new networkfor launching containers
+init. It lets the containers communicate while being
+isolated from other containers notconnected to the
+network.
+● r docker k network e create : NAME: It will create a new network
+ofbridge type by default.
+● r docker k network m rm : NAME:It will remove one or more
+networks specified by name and make sure that no containers
+are connected to the deleted network.
+● r docker k network : ls: It willlist all the networks.
+● r docker k network t inspect : NAME: It will show the detailed
+information on one or more networks.
+● r docker k network t connect K NETWORK : CONTAINER: It willconnect
+a container to a network
+● r docker k network t disconnect K NETWORK : CONTAINER: It will
+disconnect a container from a network.
+. 6. Volumes:
+Docker has volumes that are free-floating file systems. So
+there is no need to be connected to a particular container.
+You can use volumes mounted from data-only containers for
+portability. As per Docker 1.9.0, it comes with the named
+volumes that replace data-only containers.
+● r docker e volume : create: to create volumes.
+● r docker e volume : rm: To remove volumes.
+● r docker e volume : ls: To list the volumes.
+● r docker e volume : inspect: To inspect the volumes.
+7. Orchestrate:
+Orchestration manages the container’s life cycle,
+especially in dynamic environments. You can use it for
+controlling and automating severaltasks for containers.
+Among a long list of Docker orchestration tools, the most
+commonly used orchestration tools are Docker Swarm,
+Kubernetes, and Mesos. In this Docker cheat sheet, we are
+using Docker Swarm commands.
+● r Docker m swarm t init r --advertise-addr : 10.1.0.2: Initialize
+the swarm mode and listen to a
+specific interface.
+● r Docker m swarm n join > --token<manager-token> 10.1.0.2:2377:
+Itwill join an existing swarm as a manager node.
+● r Docker m swarm n join > --token<worker-token> : 10.1.0.2:2377: It
+will join a swarm as a worker node.
+● r Docker e node : ls: It willlist all nodes in the swarm.
+● r Docker e service e create s --replicas 3 3 p -p 0 80:80 e name - -
+: webngix: It will create a service from an image on the
+existing port and deploy three instances.
+● r Docker e service : ls: It willlist services running in a
+swarm.
+● r Docker e service e scale : web=5: It will scale the service.
+● r docker e service s ps : web: It will list the tasks of service.
+. 8. n Interaction h with container:
+You can use the following commandsto interact with the
+container.
+● r Docker e exe i -ti e container_name : command.sh: It willrun a
+command in the container.
+● r Docker s logs t -ft r container : name: It will follow the
+container log.
+● r Docker t commit m -m “ “t commit message” ” a -a “ “ author” ”
+e container_name : username/image_name: : tag: It will save the
+running container as an image.
+9. Build:
+You can use the following commandsto build the images from
+a Docker file.
+● r Docker d build t -t p myapp : :1.0- will build an image from the
+Docker file and tag it.
+● r Docker : images: it will list all the images that are
+locally stored
+● r Docker i rmi : alpine: 3.4 will delete an image from the
+Docker Store.
+10. Cleanup:
+Tooptimize the usage of the resources, you need to clean
+upthe resources frequently to maintain the performance.
+You can run the following commandsto clean up resources.
+● r Docker e image : prune: It will clean an unused/dangling
+image
+● r Docker e image e prune : -a: It will remove an image not used
+ina container.
+● r Docker m system : prune: Itwill prune the entire system.
+● r Docker m swarm : leave: It will leave a swarm.
+● r docker k stack m rm : stack_name: It will remove a swarm.
+● r Docker s kills $ $ r (docker s ps : -q): It will v.
+● r docker m rm r $(docker s ps a -a : -q): It will delete all stopped
+containers
+● r docker i rmi r $(docker s images : -q): It will delete all images.
+11. Services:
+Let’s now take a sneak peek at thecommands used to view
+the running services, run the services, view all service
+logs, and scale the services.
+● r Docker e service : ls: It willlist all services running ina
+swarm.
+● r Docker k stack s services : stack_name: It will display all
+running services.
+● r Docker e service s logs e stack_name : service_names: It will
+display all service logs.
+● r Docker e service e scale = stack_name_service_name= replicas:
+Itwill scale a service across qualified nodes.
+. 12. e Docker-compose t Cheat Sheet:
+Compose is a tool that helps you to define and run multi-
+container Docker applications. With Compose, you get to
+work with a YAML file to configureyour application
+services. With the help of the following commands, you can
+simply create and start all theservices from your
+configuration.
+● e docker-compose : start: It will start the container.
+● e docker-compose : stop: Itwill stop the container.
+● e docker-compose : pause: It will pause the container.
+● e docker-compose : unpause:Itwill unpause the container.
+● e docker-compose : ps: It willlist all the containers.
+● e docker-compose : up: It aggregates the output of each
+container (essentially running docker-compose logs --
+follow ).
+● e Docker-compose : down: Itstops containers and removes
+containers, networks, volumes, andimages created by up.
+● e Docker-compose f -f > <docker-compose-file> up: It will start
+upyour application
+● e docker-compose : stop-run: docker-compose in detached mode
+using -d flag, and then you canstop it whenever needed.
+c Basic e example f of r docker e compose file:
+d Created by,
+s Ojas Jawale

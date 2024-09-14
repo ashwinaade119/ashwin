@@ -1,0 +1,172 @@
+1. Launches a new container from an image
+Example:
+docker run -d -p 80:80 --name my-nginx nginx
+
+-d: Runs the container in detached mode.
+-p 80:80: Maps port 80 on the host to port 80 in the container.
+--name my-nginx: Names the container my-nginx.
+nginx: The image to run.
+2. Lists running containers. 
+Example: docker ps
+Shows a list of all running containers with details like container ID, image, and status.
+3. Stops a running container.
+Example:
+docker stop my-nginx
+
+Stops the container named my-nginx.
+4. Starts a stopped container.
+Example:
+docker start my-nginx
+Starts the container named my-nginx.
+5. Remove a stopped container.
+Example:
+docker rm my-nginx
+Removes the container named my-nginx. The container must be stopped first.
+
+6. Removes a Docker image.
+Example:
+docker rmi nginx
+Removes the nginx image from the local Docker repository.
+7. Download an image from a registry (e.g., Docker Hub).
+Example:
+docker pull nginx
+Pulls the Nginx image from Docker Hub.
+8. Build a Docker image from a Docker file.
+Example:
+docker build -t my-app .
+-t my-app: Tags the image as my-app.
+.: Specifies the build context (current directory).
+9. Executes a command in a running container.
+Example:
+docker exec -it my-nginx bash
+-it: Runs in interactive mode with a TTY.
+bash: Opens a shell inside the my-nginx container.
+10. Fetches logs from a container.
+Example:
+docker logs my-nginx
+Displays the logs of the container named my-nginx.
+11. Lists Docker networks.
+Example:
+docker network ls
+Lists all networks created in Docker.
+12. Lists Docker volumes.
+Example:
+docker volume ls
+Lists all volumes created in Docker.
+13. Starts containers defined in a docker-compose.yml file.
+Example:
+docker-compose up
+Starts all containers defined in the docker-compose.yml file in the current directory.
+14. Stops and removes containers defined in a docker-compose.yml file.
+Example:
+docker-compose down
+Stops and removes all containers, networks, and volumes defined in the docker-compose.yml file.
+15. Displays system-wide information about Docker.
+Example:
+docker info
+Shows detailed information about Docker’s configuration, including storage drivers, network settings, and available images.
+16. docker stop & remove all containers
+Description:	This command stops all containers, both running and stopped. The -a flag lists all containers, and the -q flag returns only the container IDs & removes all containers that were previously stopped.
+
+Example:
+
+docker stop $(docker ps -a -q) && docker rm $(docker ps -a -q)
+
+Managing Images
+17. List images:
+ Example :
+docker images
+18. Pull an image:
+Example:
+	docker pull ubuntu:latest
+19. Build an image from a Dockerfile:
+Example:
+	docker build -t my-app .
+20. Remove an image:
+Example :
+	docker rmi my-app
+Managing Containers
+21. Create and start a container:
+Example :
+	docker run -d ubuntu:latest /bin/bash
+22. List containers:
+Example :
+	docker ps
+23. Inspect a container:
+Example :
+	docker inspect <container-id>
+24. Stop a container:
+Example :
+	docker stop <container-id>
+
+
+
+25. Start a stopped container:
+Example :
+	docker start <container-id>
+26. Remove a container:
+Example :
+	docker rm <container-id>
+27. Execute a command in a running container:
+Example :
+	docker exec -it <container-id> bash
+
+Managing Volumes
+28. Create a volume:
+Example :
+	docker volume create my-volume
+29. List a volume:
+Example :
+	docker volume ls
+
+30. Remove a volume:
+Example :
+	docker volume rm my-volume
+
+31. Mount a volume to a container:
+Example :
+	docker run -v my-volume:/data ubuntu:latest /bin/bash
+
+31. Search for images:
+Example :
+	docker search nginx
+
+
+32. Tag an image:
+Example :
+	docker tag my-app:latest my-app:production
+
+33. Commit changes in a container to an image:
+Example :
+	docker commit <container-id> my-new-image
+
+34. Create Volume:
+Example :
+docker volume create my-volume
+35. Use a Volume in a Container:
+Example :
+docker run -d -v my-volume:/app/data my-image
+36. List Volumes:
+	Example :
+	docker volume ls
+37. Inspect a volume:
+Example :
+	docker volume inspect my-volume
+37. Remove a volume:
+	Example:
+	docker volume rm my-volume
+39.List Network:
+	Example:
+	docker network ls
+40. Create container within n/w:
+	Example:
+	docker run -d -p --network <n/w_driver_type> <imagename> 
+41. Create volume
+	Example:
+docker volume create <volumename>
+42. Create volume
+	Example:
+	docker -d -p -v <src>:<dest> <img-name>
+42. Create volume
+	Example:
+	docker image prune
