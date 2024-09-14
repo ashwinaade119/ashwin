@@ -1,0 +1,34 @@
+Introduction to Kubernetes (K8S)
+=> Kubernetes is an open-source platform that manages Docker containers in the form of a cluster. Along with the automated deployment and scaling of containers, it provides healing by automatically restarting failed containers and rescheduling them when their hosts die. This capability improves the application’s availability
+
+What is Kubernetes (k8s)?
+=> Kubernetes is an orchestration tool/container management tool , via which container can be managed , horinzantal auto scaled , route based path pathing ,loadbalancing , deployment doman base pathing, and many other container relates automation & orchestration can be performed by k8s
+OR
+Kubernetes is an open-source Container Management tool that automates container deployment, container scaling, descaling, and container load balancing (also called a container orchestration tool). It is written in Golang and has a vast community because it was first developed by Google and later donated to CNCF (Cloud Native Computing Foundation). Kubernetes can group ‘n’ number of containers into one logical unit for managing and deploying them easily. It works brilliantly with all cloud vendors i.e. public, hybrid, and on-premises. 
+
+Why use kubernetes ?
+=> kubernetes is used for autoscaling , bin packing , cost management , microservice deployment , roll back, rolling out new deployment , self healing , load balancing , hpa , secrets management , automation in deployment , microservice deployment its the ideal tool combination for microservice deployment 
+
+What are kubernetes objects ?
+=> Objects the resources of your kubernets orchestration tool 
+Types of object are : 
+1. pods
+2. services - nord port , cluster 
+3. namespace 
+4. replica set 
+5. replica controller 
+6. daemon set 
+7. horizantal pod autoscaling
+8. statefull set
+9. ingress & ingress controller
+10. deployment
+11. presistent volume & presistent volume controller 
+12. config map & config secrets 
+    Rbac
+    Helm chart 
+
+What are Cluster ?
+=> Cluster is a infra or imaginary infra term in which you have minimum two nodes , one is master node/control plan & another is worker node/slave nord 
+~Master node/control plane : The kubernetes control plan manages clusters and resources such as worker node pods.
+The control plane recive information such as cluster activity enternal & external request and more 
+~Worker node/slave nord : In the kubernates is a group of one or more container that are the smallest unit of deployment and execation in kubernates application Pod share storage, networking and other resource 
