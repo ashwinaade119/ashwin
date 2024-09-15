@@ -1,6 +1,11 @@
 Introduction to Kubernetes (K8S)
 => Kubernetes is an open-source platform that manages Docker containers in the form of a cluster. Along with the automated deployment and scaling of containers, it provides healing by automatically restarting failed containers and rescheduling them when their hosts die. This capability improves the application’s availability
 
+~Kubernetes was originally created by Google. 
+~Kubernetes was officially launched on June 7,2014.
+That time they announce it was open-sourced  by google.
+~The first stable version, kubernetes 1.0 ,was relesed on July 21,2015.
+
 What is Kubernetes (k8s)?
 => Kubernetes is an orchestration tool/container management tool , via which container can be managed , horinzantal auto scaled , route based path pathing ,loadbalancing , deployment doman base pathing, and many other container relates automation & orchestration can be performed by k8s
 OR
@@ -31,4 +36,18 @@ What are Cluster ?
 => Cluster is a infra or imaginary infra term in which you have minimum two nodes , one is master node/control plan & another is worker node/slave nord 
 ~Master node/control plane : The kubernetes control plan manages clusters and resources such as worker node pods.
 The control plane recive information such as cluster activity enternal & external request and more 
-~Worker node/slave nord : In the kubernates is a group of one or more container that are the smallest unit of deployment and execation in kubernates application Pod share storage, networking and other resource 
+~Worker node/slave nord : In the kubernates a worker node's is a machine that manage user defined container and process data in cluster 
+
+What is the pods ?
+=> A pod in kubernetes is a group of one or more container that are the smallest unit of deployment and execation in kubernates application Pod share storage, networking and other resource.
+Type of pods 
+1.Intra pod 
+2.Inter pod 
+
+What is manifest files ?
+=> In kubernetes manifest files are nithing but configuration files are in kubernetes that defines the desire state of resources. Manifest files written in jason and YAML formate 
+
+What is minikube ?
+=> Minikube is light weight kubernate implementation that creates a vm on local machine and deploys a sample cluster containing only node .
+
+What is services ?
