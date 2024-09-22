@@ -45,9 +45,24 @@ Type of pods
 2.Inter pod 
 
 What is manifest files ?
-=> In kubernetes manifest files are nithing but configuration files are in kubernetes that defines the desire state of resources. Manifest files written in jason and YAML formate 
+=> In kubernetes manifest files are nothing but configuration files are in kubernetes that defines the desire state of resources. Manifest files written in jason and YAML formate 
 
 What is minikube ?
 => Minikube is light weight kubernate implementation that creates a vm on local machine and deploys a sample cluster containing only node .
 
 What is services ?
+=>Its a k8s object , its important job is to expose your pod / microservice webapp deployed in pods outside the cluster , or keep it secure with in the cluster or provide a singular static endpoint or provide loadbalancing feature these are features of service
+- SERVICE HAVE THREE TYPES :
+1. Cluster IP : static IP gives 
+2. Nodeport : gives port 30,000 32,767
+3. Loadbalancing 
+-In Kubernetes, a Service is a method for exposing a network application that is running as one or more Pods in your cluster.
+
+What is Cluster IP ?
+=> It provide static IP and static endpoint to your pods , you cannot expose your microservice for the people of internet it is only accessible withing the cluster 
+
+What is Nodeport?
+=> Port range 30,000 and 32,767 nodeport is used to expose your container webapp microservice pod's port to the node's port
+
+What is Loadbalancer?
+=> Is to provide a a singular endpoint to your nodeport , equally distribute traffic to your nodeport , be a singular endpoint which can be mapped with dns or domain
