@@ -105,20 +105,42 @@ Its an k8s object which is capable in creating replication of pods but it work o
 
 
 What is Daemonset ?
-==>
+==> A DaemonSet in Kubernetes is a type of workload that ensures that a copy of a specific pod runs on all (or a subset of) nodes in a cluster. This is particularly useful for tasks like logging, monitoring, or other node-specific operations where you want a pod to run on every node.
 
 
 What is Deployment ?
-==>
+==> A Deployment in Kubernetes is a controller that manages a set of replica Pods. It provides declarative updates for Pods and ReplicaSets, ensuring that the desired state of the application matches the actual state in the cluster. This allows for easy scaling, rolling updates, and rollbacks.
 
 What is Statefulset ?
-==> 
+==> A StatefulSet in Kubernetes is a specialized controller designed for managing stateful applications. Unlike Deployments, which are suited for stateless applications, StatefulSets provide guarantees about the ordering and uniqueness of Pods. This makes them ideal for applications that require stable identities, persistent storage, and ordered deployment.
 
 What is Horizantol pod autoscaling (HPA) ?
-==>
+==> Horizontal Pod Autoscaler (HPA) in Kubernetes is a feature that automatically adjusts the number of pod replicas in a Deployment, StatefulSet, or ReplicaSet based on observed CPU utilization, memory usage, or custom metrics. This allows your applications to scale dynamically in response to load, ensuring efficient resource use.
 
 What is Persistent volume & Persistent volume Controller (PV&PVC)
-==>
+==> In Kubernetes, Persistent Volumes (PVs) and Persistent Volume Claims (PVCs) are key concepts for managing storage that is independent of the lifecycle of Pods. They allow applications to use storage resources effectively while decoupling the storage management from the application.
+
+Key Concepts
+Persistent Volume (PV)
+A Persistent Volume is a piece of storage in the cluster that has been provisioned by an administrator or dynamically provisioned using a StorageClass.
+PVs are independent of any individual Pod and persist beyond the lifecycle of the Pod that uses them.
+They are managed by Kubernetes and can represent various types of storage backends, such as NFS, iSCSI, cloud storage (like AWS EBS, Google Persistent Disk), etc.
+
+Persistent Volume Claim (PVC)
+A Persistent Volume Claim is a request for storage by a user.
+PVCs allow users to request specific amounts of storage and specify access modes (e.g., ReadWriteOnce, ReadOnlyMany).
+Kubernetes will match a PVC with an available PV based on the requested size and access modes.
 
 What is Ingress & Ingress Controller ?
-==>
+==> In Kubernetes, Ingress and Ingress Controllers are used to manage external access to services within a cluster. They facilitate routing and load balancing of HTTP/S traffic to various services based on defined rules.
+
+Key Concepts
+Ingress
+Ingress is a Kubernetes resource that defines rules for accessing services from outside the cluster.
+It allows you to configure the routing of external HTTP/S traffic to the appropriate services based on the requested URL path or host.
+Ingress can manage SSL termination, HTTP to HTTPS redirection, and other traffic management features.
+
+Ingress Controller
+An Ingress Controller is a component that watches for changes to the Ingress resource and applies the defined routing rules.
+It is responsible for fulfilling the Ingress rules by configuring a load balancer, reverse proxy, or another routing mechanism.
+Popular Ingress Controllers include NGINX, Traefik, HAProxy, and cloud provider-specific controllers (e.g., AWS ALB Ingress Controller). 
