@@ -66,3 +66,59 @@ What is Nodeport?
 
 What is Loadbalancer?
 => Is to provide a a singular endpoint to your nodeport , equally distribute traffic to your nodeport , be a singular endpoint which can be mapped with dns or domain
+
+What is Selector ?
+=> It basically selects/picks the metadata attached to your pods or another objects
+-you can alos say it filtures out the mentioned data and selects only the mentioned attached object 
+/COMMANDS - kubectl apply -f .
+kubectl get pods 
+kubectl get svc 
+curl localhost:IP
+kubectl describe pods 
+kubectl exec -i -t < > --container < > --/bin/bash
+kubectl delete -f .
+
+What is Namespace ?
+=> Its an object of k8s , Namespace bassically works as a segregation , pratition agent / object of your cluster 
+-i.e it divides your cluster , it helps you in segregation and mantaining proper order in cluster 
+/COMMAND kubectl get namespace or kubectl get ns 
+kubectl get-n namespace svc 
+
+What is Replica Set and Raolica Controller 
+==>
+$ Replica set -
+Its an k8s object . which will create raplica or replications of pod with the help of pods configuration stored in template  
+-While replica set works with based selector {} and lable based selector 
+
+THREE TYPES OF SUBSELECTORS (OPERATORS)-
+1. IN -
+app: webapp --> in (app: webapp , app: qrapp , app: mobileapp) What ever value matches in set based selector the selector selects that value and creates pod's replication .
+
+2. NOTIN -
+app: ecommerceapp --> in (app: webapp , app: qrapp , app: mobileapp) In this selector whatever lables/values are kept, these value are totally ignored by the selector , and selector selects the value which is not present in your set  
+3. EXITS -
+app: webapp --> in (app: webapp) In whatever value present in exist based selector it will pick it and create pods replica 
+
+
+$Replica Controller -
+Its an k8s object which is capable in creating replication of pods but it work only within equallity based selector 
+
+
+What is Daemonset ?
+==>
+
+
+What is Deployment ?
+==>
+
+What is Statefulset ?
+==> 
+
+What is Horizantol pod autoscaling (HPA) ?
+==>
+
+What is Persistent volume & Persistent volume Controller (PV&PVC)
+==>
+
+What is Ingress & Ingress Controller ?
+==>
