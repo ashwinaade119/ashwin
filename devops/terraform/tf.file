@@ -1,0 +1,6 @@
+# Specify the required provider
+provider "aws" {
+  region = "us-west-2"  # Set your desired AWS region
+}
+Provider Block: This block configures the AWS provider. The region specifies which AWS region to use for creating resources.
+
