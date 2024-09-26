@@ -6,10 +6,10 @@ spec:
     containers:
           - name: appashu
             image: nginx:latest
-    resources:
-     requests:
-          cpu: "50"
-          memory: "120"
+   resources:
+              requests:
+                  cpu: "50"
+                  memory: "120"
     ports:
          protocol: TCP
          containerPort: 80
