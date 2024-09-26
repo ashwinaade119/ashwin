@@ -3,15 +3,15 @@ kind: pod
 metadata: 
       name: app
 spec: 
-    container:
-          -name: appashu
-           image: nginx:latest
+    containers:
+          - name: appashu
+            image: nginx:latest
     resources:
      requests:
           cpu: "50"
           memory: "120"
     ports:
-        -protocal: TPC
+        - protocal: TCP
          containerport: 80
          name: http
                          
