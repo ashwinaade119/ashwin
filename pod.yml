@@ -2,10 +2,10 @@ apiVersion: v1
 kind: Pod
 metadata:
         name: nginxapp
-spec: 
+spec:
     containers:
-          - name: appashu
-            image: nginx:latest
+        - name: nginxcont
+          image: nginx:latest
    resources:
               requests:
                   cpu: "50"
