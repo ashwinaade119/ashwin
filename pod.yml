@@ -1,7 +1,7 @@
 apiVersion: v1
-kind: pod 
-metadata: 
-      name: app
+kind: Pod
+metadata:
+        name: nginxapp
 spec: 
     containers:
           - name: appashu
