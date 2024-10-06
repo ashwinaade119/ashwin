@@ -63,7 +63,7 @@ Linux is an open-source operating system developed by Linus Torvalds in 1991. It
 
 ```
 ls: List files and directories
-``
+```
 cd: Change directory
 ```
 mkdir: Create a new directory
