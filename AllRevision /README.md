@@ -91,3 +91,16 @@ Difference between Linux and Windows
 | ------------- | ------------- |
 |Linux is a open source operating system.        | While windows are the not the open source operating system.       | 
 | Linux is free of cost.       | While it is costly.         | 
+| It’s file name case-sensitive. |	While it’s file name is case-insensitive. |
+|In linux, monolithic kernel is used.	| While in this, hybrid kernel is used. |
+|Linux is more efficient in comparison of windows.	| While windows are less efficient.|
+|There is forward slash is used for Separating the directories.	| While there is back slash is used for Separating the directories.|
+|Linux provides more security than windows.	| While it provides less security than linux. |
+|Linux is widely used in hacking purpose based systems. |	While windows does not provide much efficiency in hacking. |
+|There are 3 types of user account – 
+
+(1) Regular , (2) Root , (3) Service account |
+
+|There are 4 types of user account – 
+
+(1) Administrator , (2) Standard , (3) Child , (4) Guest |
