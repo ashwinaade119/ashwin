@@ -97,10 +97,5 @@ Difference between Linux and Windows
 |There is forward slash is used for Separating the directories.	| While there is back slash is used for Separating the directories.|
 |Linux provides more security than windows.	| While it provides less security than linux. |
 |Linux is widely used in hacking purpose based systems. |	While windows does not provide much efficiency in hacking. |
-|There are 3 types of user account – 
-
-(1) Regular , (2) Root , (3) Service account |
-
-|There are 4 types of user account – 
-
-(1) Administrator , (2) Standard , (3) Child , (4) Guest |
+|There are 3 types of user account – (1) Regular , (2) Root , (3) Service account |
+|There are 4 types of user account – (1) Administrator , (2) Standard , (3) Child , (4) Guest |
