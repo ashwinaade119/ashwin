@@ -59,7 +59,7 @@ Basic tools for utilizing the command line interface (CLI) to communicate with t
 Linux is an open-source operating system developed by Linus Torvalds in 1991. It provides a customizable and secure alternative to proprietary systems. With its stable performance, Linux is widely used across devices, from personal computers to servers and smartphones. The collaborative efforts of its developer community continue to drive innovation, making Linux a dominant force in the world of computing.
 
 ## What are the essential Linux commands for beginners?
-###Some essential Linux commands for beginners include:
+### Some essential Linux commands for beginners include:
 
 ```
 ls: List files and directories
