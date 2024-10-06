@@ -85,10 +85,9 @@ sudo: Execute commands with administrative privilegesk
 
 
 
-Display Table in README.md file in Git
+Difference between Linux and Windows
 
-
-| FirstName     | LastName      | City   
-| ------------- | ------------- | --------    |
-| `John`        | Test1         | `NewYork`   |
-| `Bob`         | Test2         | `Toronto`   |
+| Linux     | Windows      |
+| ------------- | ------------- |
+|Linux is a open source operating system.        | While windows are the not the open source operating system.       | 
+| Linux is free of cost.       | While it is costly.         | 
