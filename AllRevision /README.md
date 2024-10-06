@@ -54,3 +54,29 @@ It has small peripheral hardware drivers as compared to windows.
 
 ## Linux Commands
 Basic tools for utilizing the command line interface (CLI) to communicate with the operating system are Linux commands. Commonly used commands include ls to list contents of directories, cd to modify directories, and pwd to show the path of the current directory. With commands like cp (copy), mv (move), and rm (delete), someone can manage file activities. Commands for system information and management include free for memory use, df to evaluate disk space usage, and top for monitoring system processes. Utilizing networking commands such netstat, ifconfig, and ping, users can monitor and troubleshoot network connections. Package management differs depending on the distribution; Fedora-based machines use dnf, while Debian-based systems use apt. Commands like cat, grep, awk, and sed are required for editing text files. Knowing and performing these directions well enables. For clear understanding about the Linux commands refer this link.
+
+## What is Linux Operating System?
+Linux is an open-source operating system developed by Linus Torvalds in 1991. It provides a customizable and secure alternative to proprietary systems. With its stable performance, Linux is widely used across devices, from personal computers to servers and smartphones. The collaborative efforts of its developer community continue to drive innovation, making Linux a dominant force in the world of computing.
+
+## What are the essential Linux commands for beginners?
+###Some essential Linux commands for beginners include:
+
+```
+ls: List files and directories
+``
+cd: Change directory
+```
+mkdir: Create a new directory
+```
+rm: Remove files or directories
+```
+cp: Copy files and directories
+```
+mv: Move or rename files and directories
+```
+cat: Display file content
+```
+grep: Search for text in files
+```
+sudo: Execute commands with administrative privilegesk
+```
