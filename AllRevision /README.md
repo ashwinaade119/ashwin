@@ -85,7 +85,7 @@ sudo: Execute commands with administrative privilegesk
 
 
 
-Difference between Linux and Windows
+## Difference between Linux and Windows
 
 | Linux     | Windows      |
 | ------------- | ------------- |
