@@ -81,3 +81,14 @@ grep: Search for text in files
 ```
 sudo: Execute commands with administrative privilegesk
 ```
+
+
+
+
+Display Table in README.md file in Git
+
+
+| FirstName     | LastName      | City   
+| ------------- | ------------- | --------    |
+| `John`        | Test1         | `NewYork`   |
+| `Bob`         | Test2         | `Toronto`   |
